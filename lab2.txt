@@ -1,0 +1,54 @@
+Hugh Bagan
+CMPUT 404 Wi21 
+Lab 2
+
+
+Question 1 
+How do you specify a TCP socket in Python?
+------------------------------------------
+socket.socket() specifies a new socket.
+SOCK_STREAM is analogous to TCP, and SOCK_DGRAM to UDP.
+Source: Ian Boyd https://stackoverflow.com/a/60425748
+
+
+Question 2 
+What is the difference between a client socket and a 
+server socket in Python?
+------------------------
+The server socket needs to bind() to an address and port, and 
+then listen() and accept() connections.
+The client socket only needs to connect(). 
+
+
+Question 3
+How do we instruct the OS to let us reuse the same bind port?
+-------------------------------------------------------------
+The socket.SO_REUSEADDR flag allows us to reuse the address 
+and port (set socket options with setsockopt() ).
+
+
+Question 4
+What information do we get about incoming connections?
+------------------------------------------------------
+Incoming connections to the server are received using accept().
+It returns a pair (conn, address): `conn` is a new socket 
+object that can send and receive data on the connection. 
+`address` is the address bound to the socket on the other 
+end of the connection (ie. the client).
+Source: 
+https://docs.python.org/3/library/socket.html#socket.socket.accept
+
+
+Question 5
+What is returned by `recv()` from the server after it is done
+sending the HTTP request?
+-------------------------
+recv() returns a bytes object of the data sent by the server, and
+afterward it will return an empty bytes object 
+(in the while loop).
+
+
+Question 6
+Provide a link to your code on Github.
+--------------------------------------
+<TODO >
