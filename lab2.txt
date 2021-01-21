@@ -1,6 +1,7 @@
 Hugh Bagan
 CMPUT 404 Wi21 
 Lab 2
+https://github.com/hughbagan/CMPUT404Wi21-lab2
 
 
 Question 1 
@@ -51,4 +52,4 @@ afterward it will return an empty bytes object
 Question 6
 Provide a link to your code on Github.
 --------------------------------------
-<TODO >
+https://github.com/hughbagan/CMPUT404Wi21-lab2

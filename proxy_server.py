@@ -3,7 +3,7 @@ import socket, sys, time
 import client
 
 
-def connectToGoogle(payload):
+def connect_to_google(payload):
     # eg. payload = f'GET / HTTP/1.0\r\nHost: {host}\r\n\r\n'
     proxy_data = b"" # bytestring!
     try:
@@ -23,7 +23,7 @@ def connectToGoogle(payload):
         while True:
             data = s.recv(buffer_size)
             if not data:
-                print(data)
+                #print(data)
                 break
             proxy_data += data
         print("Data from", host, "received")
@@ -53,7 +53,7 @@ def main():
             print("Received from client:", full_data)
             time.sleep(0.5)
 
-            proxy_data = connectToGoogle(full_data)
+            proxy_data = connect_to_google(full_data)
             print(proxy_data[:200], "...")
 
             # send the res. from google back to proxy_client.py

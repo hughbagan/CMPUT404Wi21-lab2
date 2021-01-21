@@ -24,7 +24,7 @@ def main():
             # "receive" and specify buffer size (amount of data to get)
             data = s.recv(buffer_size)
             if not data:
-                print(data)
+                #print(data)
                 break
             full_data += data
         print(full_data[:200], "...")
